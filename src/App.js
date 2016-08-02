@@ -1,17 +1,12 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-import {
-    Grid,
-    Row,
-    Col,
-    Button
-} from 'react-bootstrap';
+import Navbar from './components/layout/navbar';
+import Footer from './components/layout/footer';
+
 
 import bootstrap from './bootstrap.scss';
 import appcss from './app.scss';
-
-import certificate48 from "./img/logo/certificate48.png";
 
 // icons
 import appleIcon60x60 from "./img/app-icon/apple-icon-60x60.png";
@@ -50,7 +45,8 @@ export default () =>  (
         <Helmet
             title="Edulisting"
             meta={[
-                {"theme-color": "#f7cb38"}
+                {"name": "description", "content": "edulisting"},
+                {"theme-color": "#f7cb38"},
             ]}
             link={[
                 {rel: "apple-touch-icon", sizes: "60x60", href: appleIcon60x60},
@@ -68,22 +64,38 @@ export default () =>  (
             ]}
         />
 
-       <Grid>
-            <Row>
-                <Col md={6}>
-                    <h2><img src={certificate48} width={48} height={48} /> Edulisting.com</h2>
-                </Col>
-                <Col md={6}>
-                    <Button>asdf</Button>
-                </Col>
-            </Row>
-       </Grid>
+        <Navbar />
 
-       <Grid>
-            <Row>
-                <Col md={6}>asdf</Col>
-                <Col md={6}>asdf</Col>
-            </Row>
-       </Grid>
+        <div className="jumbotron">
+            <div className="container">
+                <h1 className="display-3">
+                    Hello, world!
+                </h1>
+                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                <p><a className="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+            </div>
+        </div>
+
+        <div className="container">
+            <div className="row">
+                <div className="col-md-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div>
+                <div className="col-md-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div>
+                <div className="col-md-4">
+                    <h2>Heading</h2>
+                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                    <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+
+        <Footer />
    </div>
 );
